@@ -1,8 +1,34 @@
-// This is a variable that can be used throughout the file
+// For more language features, see: http://lesscss.org/features/#features-overview-feature
+
+// this is a variable that can be used throughout the file
 @nice-blue: #5B83AD;
-// You can do arithmetic too!
+// you can do arithmetic too
 @light-blue: @nice-blue + #111;
 
-#content h1 {
+// variables for pixels too
+// this makes it easy to change sizing uniformly
+@standard-padding: 12px;
+
+.text-coloring {
     color: @light-blue;
+}
+
+#content {
+    // an example of a mixin
+    .text-coloring;
+
+    // an example of nesting
+    h1 {
+        font-weight: normal;
+    }
+    p {
+        padding: @standard-padding;
+
+        // Use &: to refer to the current parent
+        &:last-child {
+            // Some arithmetic on padding
+            padding-bottom: @standard-padding * 2;
+        }
+
+    }
 }

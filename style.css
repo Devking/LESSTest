@@ -1,3 +1,15 @@
-#content h1 {
+.text-coloring {
   color: #6c94be;
+}
+#content {
+  color: #6c94be;
+}
+#content h1 {
+  font-weight: normal;
+}
+#content p {
+  padding: 12px;
+}
+#content p:last-child {
+  padding-bottom: 24px;
 }
