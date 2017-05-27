@@ -6,7 +6,8 @@ LESS is a CSS pre-processor; aka, this means that you write LESS, compile it,
 and then the compiler generates a CSS file.
 
 LESS is used because it gives you more control than CSS, and gives you more
-powerful features such as use of mixins (think constants that you can re-use).
+powerful features such as use of variables and mixins (styles that you can
+reuse).
 
 ## Use
 
@@ -28,3 +29,6 @@ is the name of the output CSS file. You can also output a minified version by
 adding the `--clean-css` flag.
 
 Read more [here](http://lesscss.org).
+
+You will need to re-compile your LESS code every time you make changes. There
+are ways to make this more efficient, such as using a task runner like Grunt.
